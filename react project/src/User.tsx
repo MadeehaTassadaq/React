@@ -1,20 +1,10 @@
-interface UserProps{
-    name:string,
-    age:number,
-    email:string
+type name={
+    name:string
 }
-
-function User(Props:UserProps) {
-    
-    return (
-        <div>
-          <hr/>  
-            <h1>User Component</h1>
-            <h2>Name:{Props.name }</h2>
-            <h2>Age:{Props.age}</h2>
-            <h2>Email:{Props.email}</h2>
-            <hr/>
-        </div>
-    );
+function User({ name="Aiman" }:name) {
+    return <div>
+        <h1>Hi,{name}</h1>
+        
+    </div>
 }
 export default User;
