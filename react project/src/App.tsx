@@ -1,10 +1,26 @@
-import Wrapper from "./wrapper"
+import {useState} from "react"
 function App(){
-  return(<div>
-    <h1>Pass Props as Jsx</h1>
-    
-  <Wrapper color="blue"name="User"><h1>Hello Everyone</h1></Wrapper>
-  <Wrapper name="Admin"><h1>Hello Admin</h1><h2 color="green">Hello Aiman</h2></Wrapper>
-  </div>)
+  const[name,setName]=useState("")
+  const[password,setPassword]=useState("")
+  const[email,setEmail]=useState("")
+return (
+  
+  <div>
+    <h1>Controlled Component</h1>
+    <form action="" method="get">
+      <input type="text" value={name}onChange={(event)=>setName(event.target.value)}placeholder="Type your name here"></input>
+      <br/><br/>
+      <input type="password"value={password} onChange={(event)=>setPassword(event.target.value)}placeholder="Type your password here"></input>
+      <br/><br/>
+      <input type="text"value={email}onChange={(event)=>setEmail(event.target.value)} placeholder="Type your email here"></input>
+      <br/><br/>
+      <button>submit</button>
+      <button onClick={()=>{setName("");setEmail("");setPassword("")}}>clear</button>
+<h1>{name}</h1>
+<h1>{password}</h1>
+<h1>{email}</h1>
+    </form>
+  </div>
+)
 }
 export default App;
