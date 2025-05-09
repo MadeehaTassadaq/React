@@ -1,12 +1,10 @@
-import User from "./User"
+import Wrapper from "./wrapper"
 function App(){
   return(<div>
-    <h1>
-      Props in react
-    </h1>
-    <User name="Madeeha"/>
-    <User name="Default Name" />
-    <User name="Aiman"/>
+    <h1>Pass Props as Jsx</h1>
+    
+  <Wrapper color="blue"name="User"><h1>Hello Everyone</h1></Wrapper>
+  <Wrapper name="Admin"><h1>Hello Admin</h1><h2 color="green">Hello Aiman</h2></Wrapper>
   </div>)
 }
 export default App;
